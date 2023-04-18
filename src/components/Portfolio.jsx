@@ -2,9 +2,10 @@ import React from "react";
 import portfolio from '../data/portfolio'
 import PortfolioItem from './PortfolioItems'
 import Title from './Title'
-const Portfolio = () =>{
+import { forwardRef } from "react";
+const Portfolio = forwardRef((props,ref) =>{
     return (
-        <div className="flex justify-center">
+        <div className="flex justify-center" ref={ref}>
         <div>
             <Title className="">Projects</Title>       
             <div className="flex flex-col md:flex-row items-center justify-center">
@@ -23,5 +24,5 @@ const Portfolio = () =>{
     </div>
 
     )
-}
+});
 export default Portfolio;

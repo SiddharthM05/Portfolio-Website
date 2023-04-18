@@ -1,8 +1,9 @@
 import React from "react";
 import Title from "./Title"
-const Contact = ()=>{
+import { forwardRef } from "react";
+const Contact = forwardRef((props,ref)=>{
     return (
-        <div className="flex flex-col mb-10 mx-auto">
+        <div className="flex flex-col mb-10 mx-auto" ref={ref}>
             <div className="flex justify-center items-center">
                 <form action="https://getform.io/slug"
                 method="POST"
@@ -33,6 +34,6 @@ const Contact = ()=>{
             </div>
         </div>
     )
-}
+});
 
 export default Contact;
