@@ -5,7 +5,7 @@ const Intro = () =>{
     
     return (
         <div className="flex items-center justify-center flex-col
-        text-center pt-20 pb-6">
+        text-center pt-36 pb-10">
             <h1 className="text-4xl dark:text-white md:text-7xl mb-1
             md:mb-3 font-bold">Siddharth Malik</h1>
             <span className="text-base md:text-xl mb-3 font-medium">

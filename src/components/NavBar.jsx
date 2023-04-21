@@ -11,7 +11,7 @@ function Navbar({ projectsRef, timelineRef, contactRef }) {
     });
   };
   return (
-    <nav className="z-20 hidden sm:block fixed w-full dark:bg-stone-900 border-b-2 border-gray-200 dark:border-gray-700 bg-white bg-opacity-95 dark:bg-opacity-95">
+    <nav className=" z-20 hidden sm:block fixed w-full dark:bg-stone-900 border-b-2 border-gray-200 dark:border-gray-700 bg-white bg-opacity-95 dark:bg-opacity-95">
       <div ref={navBarRef} className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <DarkModeToggle></DarkModeToggle>
         <div className="flex justify-between h-16">

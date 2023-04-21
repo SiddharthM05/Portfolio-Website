@@ -5,7 +5,7 @@ import Title from './Title'
 import { forwardRef } from "react";
 const Portfolio = forwardRef((props,ref) =>{
     return (
-        <div className="flex justify-center" ref={ref}>
+        <div className="flex justify-center p-7 " ref={ref}>
         <div>
             <Title className="">Projects</Title>       
             <div className="flex flex-col md:flex-row items-center justify-center">

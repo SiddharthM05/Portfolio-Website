@@ -5,7 +5,7 @@ import Title from "./Title";
 import { forwardRef } from "react";
 const Timeline = forwardRef((props,ref) =>{
     return (
-        <div className="flex flex-col md:flex-row justify-center my-20" ref={ref}>
+        <div className="flex flex-col md:flex-row justify-center my-20 pt-5" ref={ref}>
             <div className="w-full md:w-7/12">
                 <Title>Timeline</Title>
                 {timeline.map(item=>(
