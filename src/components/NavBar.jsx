@@ -24,19 +24,19 @@ function Navbar({ projectsRef, timelineRef, contactRef }) {
             </button>
             <button
               onClick={() => scrollToRef(projectsRef)}
-              className="ml-4 dark:text-white font-medium"
+              className="hidden md:block ml-4 dark:text-white font-medium"
             >
               Projects
             </button>
             <button
               onClick={() => scrollToRef(timelineRef)}
-              className="ml-4 dark:text-white font-medium"
+              className="hidden md:block ml-4 dark:text-white font-medium"
             >
               Timeline
             </button>
             <button
               onClick={() => scrollToRef(contactRef)}
-              className="ml-4 dark:text-white font-medium"
+              className="hidden md:block ml-4 dark:text-white font-medium"
             >
               Contact Me
             </button>
