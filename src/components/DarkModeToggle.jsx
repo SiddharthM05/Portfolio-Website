@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { sun, moon } from "../data/svg";
 
-const DarkModeToggle = () => {
+const DarkModeToggle = (props) => {
   const [theme, setTheme] = useState("dark");
 
   useEffect(() => {
@@ -29,7 +29,7 @@ const DarkModeToggle = () => {
       <button
         type="button"
         onClick={handleThemeSwitch}
-        className="fixed p-2 z-10 right-10 top-4 bg-violet-300 dark:bg-orange-300 text-lg  rounded-md"
+        className={` ${props.position} p-2 z-10 right-10 top-4 bg-violet-300 dark:bg-orange-300 text-lg  rounded-md`}
       >
         {theme === "dark" ? sun : moon}
       </button>
