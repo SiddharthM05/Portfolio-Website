@@ -4,13 +4,7 @@ import { sun, moon } from "../data/svg";
 const DarkModeToggle = (props) => {
   const [theme, setTheme] = useState("dark");
 
-  useEffect(() => {
-    if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
-      setTheme("dark");
-    } else {
-      setTheme("light");
-    }
-  }, []);
+  
 
   const handleThemeSwitch = () => {
     setTheme(theme === "dark" ? "light" : "dark");
