@@ -5,18 +5,17 @@ import { download } from "../data/svg";
 function Navbar({ projectsRef, timelineRef, contactRef }) {
   const [isMenuOpen, SetIsMenuOpen] = useState(null);
   const navBarRef = useRef(null);
-  const scrollToRef = (ref,height) => {
+  const scrollToRef = (ref, height) => {
     window.scrollTo({
-      top: ref.current.offsetTop - navBarRef.current.offsetHeight-height,
+      top: ref.current.offsetTop - navBarRef.current.offsetHeight - height,
       behavior: "smooth",
     });
   };
   return (
     <div>
-      
       <nav className=" z-20 hidden md:block fixed w-full bg-stone-900 border-b-2  border-gray-700  bg-opacity-95">
         <div ref={navBarRef} className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <DarkModeToggle position="z-30 fixed"></DarkModeToggle>
+          <DarkModeToggle position="z-30 fixed"></DarkModeToggle>
           <div className="flex justify-between h-16">
             <div className="flex items-center">
               <button
@@ -26,19 +25,19 @@ function Navbar({ projectsRef, timelineRef, contactRef }) {
                 Home
               </button>
               <button
-                onClick={() => scrollToRef(projectsRef,0)}
+                onClick={() => scrollToRef(projectsRef, 0)}
                 className="ml-4 text-white font-medium"
               >
                 Projects
               </button>
               <button
-                onClick={() => scrollToRef(timelineRef,0)}
+                onClick={() => scrollToRef(timelineRef, 0)}
                 className="ml-4 text-white font-medium"
               >
                 Timeline
               </button>
               <button
-                onClick={() => scrollToRef(contactRef,0)}
+                onClick={() => scrollToRef(contactRef, 0)}
                 className="ml-4 text-white font-medium"
               >
                 Contact Me
@@ -53,7 +52,7 @@ function Navbar({ projectsRef, timelineRef, contactRef }) {
         </div>
       </nav>
       <nav className=" md:hidden z-20 flex fixed w-full h-16  bg-stone-900 border-b-2  border-gray-700  bg-opacity-95 dark:bg-opacity-95">
-      <DarkModeToggle position="z-30 fixed right-3"></DarkModeToggle>
+        <DarkModeToggle position="z-30 fixed right-3"></DarkModeToggle>
         <button
           className={`${
             isMenuOpen && "open"
@@ -61,7 +60,7 @@ function Navbar({ projectsRef, timelineRef, contactRef }) {
           onClick={() => {
             SetIsMenuOpen((open) => !open);
           }}
-          style={{ transform:"scale(1.3)" }}
+          style={{ transform: "scale(1.3)" }}
         >
           <span className="hamburger-top bg-white"></span>
           <span className="hamburger-middle bg-white"></span>
@@ -72,8 +71,7 @@ function Navbar({ projectsRef, timelineRef, contactRef }) {
           <div
             className={`${
               isMenuOpen ? "flex" : "hidden"
-            }  absolute  h-screen flex-col items-center   py-12 mt-16 space-y-6 font-bold bg-stone-900 w-full left-0 right-0 self-center drop-shadow-md`}
-            
+            }  absolute  h-screen flex-col items-center   py-12 mt-16 space-y-6 font-bold bg-stone-800 dark:bg-stone-900 w-full left-0 right-0 self-center drop-shadow-md`}
           >
             <div className=" flex flex-col items-center self-end px-6 py-1 pt-24 pb-4 divide-y w-screen opacity-90 bg-background">
               <button
@@ -87,7 +85,7 @@ function Navbar({ projectsRef, timelineRef, contactRef }) {
               </button>
               <button
                 onClick={() => {
-                  scrollToRef(projectsRef,50);
+                  scrollToRef(projectsRef, 50);
                   SetIsMenuOpen(false);
                 }}
                 className=" text-white py-5 font-medium text-xl "
@@ -96,7 +94,7 @@ function Navbar({ projectsRef, timelineRef, contactRef }) {
               </button>
               <button
                 onClick={() => {
-                  scrollToRef(timelineRef,50);
+                  scrollToRef(timelineRef, 50);
                   SetIsMenuOpen(false);
                 }}
                 className="text-white py-5 font-medium text-xl "
@@ -105,7 +103,7 @@ function Navbar({ projectsRef, timelineRef, contactRef }) {
               </button>
               <button
                 onClick={() => {
-                  scrollToRef(contactRef,50);
+                  scrollToRef(contactRef, 50);
                   SetIsMenuOpen(false);
                 }}
                 className=" text-white py-5 font-medium  text-xl "
