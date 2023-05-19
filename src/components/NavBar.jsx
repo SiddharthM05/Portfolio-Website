@@ -48,6 +48,7 @@ function Navbar({ projectsRef, timelineRef, contactRef }) {
                 <span>Download CV</span>
               </button>
             </div>
+
           </div>
         </div>
       </nav>
